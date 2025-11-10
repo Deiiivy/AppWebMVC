@@ -1,39 +1,26 @@
-# Web Application MVC
-## Developed using Visual Studio .NET 2022 and MS SQL Server 2021
-## Developer: Walter Hugo Arboleda Mazo
+# AppWebMVC
 
-## SQL Server 2021 Database SampleDb and tables Categories and Products
-<img width="477" height="262" alt="image" src="https://github.com/user-attachments/assets/f2f9049d-f30e-4f7d-b140-aa8edc8dfb52" />
+<img width="1356" height="720" alt="imagen" src="https://github.com/user-attachments/assets/94a3900a-fa37-42b0-a01d-62d626d708ff" />
 
-## SQL Server 2021 Database Creation for SampleDb Database and tables Categories and Products
 
-CREATE DATABASE SampleDb;
-GO
+## Descripción
+Aplicación web desarrollada con ASP.NET Core MVC que implementa el patrón Modelo-Vista-Controlador.  
+Permite realizar operaciones CRUD sobre las tablas Empleados, Clientes y Productos.
 
-USE SampleDb;
-GO
+## Arquitectura
+El proyecto sigue la arquitectura MVC:
+- **Modelo (Model):** Clases que representan las entidades y su lógica.
+- **Vista (View):** Archivos `.cshtml` creados con Razor para mostrar la información.
+- **Controlador (Controller):** Maneja las solicitudes del usuario y coordina el flujo entre la vista y el modelo.
 
-CREATE TABLE Categories(
-CategoryId INT IDENTITY(1,1) PRIMARY KEY,
-Name NVARCHAR(100) NOT NULL
-);
-GO
+## Funcionalidades
+- CRUD de Empleados  
+- CRUD de Clientes  
+- CRUD de Productos
+- CRUD de Categorias 
 
-CREATE TABLE Products(
-ProductId INT IDENTITY(1,1) PRIMARY KEY,
-Name NVARCHAR(100) NOT NULL,
-Price DECIMAL(18,2) NOT NULL,
-CategoryId INT FOREIGN KEY REFERENCES Categories(CategoryId)
-);
-GO
-
-## SQL Server 2021 installed packages with the Nuget Manager:
-
-Microsoft.Data.SqlClient
-
-System.Data.SqlClient
-
-Microsoft.AspNetCore.Mvc.TagHelpers
-
-## References:
-https://www.youtube.com/watch?v=0tWLmvk86FA&list=PL5bLncqubD6soGTTcNv4YGlIha-b5gBfy
+## Tecnologías
+- ASP.NET Core MVC  
+- C#  
+- SQL Server  
+- Razor Pages  
