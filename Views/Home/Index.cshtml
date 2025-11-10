@@ -1,9 +1,14 @@
-﻿
-<h1>Home</h1>
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
 
-@Html.ActionLink("Products", "Index", "Product")
+<div class="text-center mt-5">
+    <h1 class="display-4">Bienvenido a Web App Products and Categories</h1>
+    <p class="lead">Gestiona tus productos, categorías y clientes de manera sencilla.</p>
 
-<br />
-<br />
-
-@Html.ActionLink("Categories", "Index", "Category")
+    <div class="mt-4">
+        <a class="btn btn-primary btn-lg m-2" asp-controller="Product" asp-action="Index">Productos</a>
+        <a class="btn btn-success btn-lg m-2" asp-controller="Category" asp-action="Index">Categorías</a>
+        <a class="btn btn-warning btn-lg m-2" asp-controller="Clients" asp-action="Index">Clientes</a>
+    </div>
+</div>
